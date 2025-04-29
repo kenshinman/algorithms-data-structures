@@ -8,9 +8,7 @@ function highestScoringWord(str) {
       return acc + letters.indexOf(letter);
     }, 0));
   });
-  const highestValue = numArr.sort((a, b) => (a > b ? 1 : -1))[
-    numArr.length - 1
-  ];
+  const highestValue = Math.max(...numArr);
 
   return splitWords[numArr.indexOf(highestValue)];
 }
